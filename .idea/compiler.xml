@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="config-server" />
+        <module name="eshop-dataaggr-service" />
+        <module name="eshop-datasync-service" />
+        <module name="eshop-inventory-service" />
+        <module name="eshop-price-service" />
+        <module name="eshop-product-service" />
+        <module name="eureka-server" />
+        <module name="greeting-service" />
+        <module name="hystrix-terbine-server" />
+        <module name="say-hello-service" />
+        <module name="sleuth-server" />
+        <module name="user-service" />
+        <module name="zuul-server" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="config-server" target="1.8" />
+      <module name="eshop-dataaggr-service" target="1.8" />
+      <module name="eshop-datasync-service" target="1.8" />
+      <module name="eshop-inventory-service" target="1.8" />
+      <module name="eshop-price-service" target="1.8" />
+      <module name="eshop-product-service" target="1.8" />
+      <module name="eureka-server" target="1.8" />
+      <module name="greeting-service" target="1.8" />
+      <module name="hystrix-terbine-server" target="1.8" />
+      <module name="say-hello-service" target="1.8" />
+      <module name="sleuth-server" target="1.8" />
+      <module name="user-service" target="1.8" />
+      <module name="zuul-server" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

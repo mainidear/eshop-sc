@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/eureka-server/pom.xml" />
+        <option value="$PROJECT_DIR$/say-hello-service/pom.xml" />
+        <option value="$PROJECT_DIR$/greeting-service/pom.xml" />
+        <option value="$PROJECT_DIR$/hystrix-terbine-server/pom.xml" />
+        <option value="$PROJECT_DIR$/zuul-server/pom.xml" />
+        <option value="$PROJECT_DIR$/config-server/pom.xml" />
+        <option value="$PROJECT_DIR$/sleuth-server/pom.xml" />
+        <option value="$PROJECT_DIR$/user-service/pom.xml" />
+        <option value="$PROJECT_DIR$/eshop-product-service/pom.xml" />
+        <option value="$PROJECT_DIR$/eshop-price-service/pom.xml" />
+        <option value="$PROJECT_DIR$/eshop-inventory-service/pom.xml" />
+        <option value="$PROJECT_DIR$/eshop-datasync-service/pom.xml" />
+        <option value="$PROJECT_DIR$/eshop-dataaggr-service/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_9" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+  <component name="SvnBranchConfigurationManager">
+    <option name="mySupportsUserInfoFilter" value="true" />
+  </component>
+</project>
