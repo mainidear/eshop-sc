@@ -179,7 +179,7 @@ public class DataChangeQueueReceiver {
     				dimDataChangeMessageSet.clear();
     			}
     			try {
-					Thread.sleep(5000);
+					Thread.sleep(100);
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				} 

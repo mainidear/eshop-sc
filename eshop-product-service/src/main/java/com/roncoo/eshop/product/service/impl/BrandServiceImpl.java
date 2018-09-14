@@ -17,19 +17,52 @@ public class BrandServiceImpl implements BrandService {
 	@Autowired
 	private RabbitMQSender rabbitMQSender;
 	
-	public void add(Brand brand) {
+	public void add(Brand brand, String operationType) {
 		brandMapper.add(brand); 
-		rabbitMQSender.send(RabbitQueue.DATA_CHANGE_QUEUE, "{\"event_type\": \"add\", \"data_type\": \"brand\", \"id\": " + brand.getId() + "}");
+		
+		String queue = null;
+		
+		if(operationType == null || "".equals(operationType)) {
+			queue = RabbitQueue.DATA_CHANGE_QUEUE;
+		} else if("refresh".equals(operationType)) {
+			queue = RabbitQueue.REFRESH_DATA_CHANGE_QUEUE;
+		} else if("high".equals(operationType)) {
+			queue = RabbitQueue.HIGH_PRIORITY_DATA_CHANGE_QUEUE;
+		}
+		
+		rabbitMQSender.send(queue, "{\"event_type\": \"add\", \"data_type\": \"brand\", \"id\": " + brand.getId() + "}");
 	}
 	
-	public void update(Brand brand) {
+	public void update(Brand brand, String operationType) {
 		brandMapper.update(brand); 
-		rabbitMQSender.send(RabbitQueue.DATA_CHANGE_QUEUE, "{\"event_type\": \"update\", \"data_type\": \"brand\", \"id\": " + brand.getId() + "}");
+		
+		String queue = null;
+		
+		if(operationType == null || "".equals(operationType)) {
+			queue = RabbitQueue.DATA_CHANGE_QUEUE;
+		} else if("refresh".equals(operationType)) {
+			queue = RabbitQueue.REFRESH_DATA_CHANGE_QUEUE;
+		} else if("high".equals(operationType)) {
+			queue = RabbitQueue.HIGH_PRIORITY_DATA_CHANGE_QUEUE;
+		}
+		
+		rabbitMQSender.send(queue, "{\"event_type\": \"update\", \"data_type\": \"brand\", \"id\": " + brand.getId() + "}");
 	}
 
-	public void delete(Long id) {
+	public void delete(Long id, String operationType) {
 		brandMapper.delete(id); 
-		rabbitMQSender.send(RabbitQueue.DATA_CHANGE_QUEUE, "{\"event_type\": \"delete\", \"data_type\": \"brand\", \"id\": " + id + "}");
+		
+		String queue = null;
+		
+		if(operationType == null || "".equals(operationType)) {
+			queue = RabbitQueue.DATA_CHANGE_QUEUE;
+		} else if("refresh".equals(operationType)) {
+			queue = RabbitQueue.REFRESH_DATA_CHANGE_QUEUE;
+		} else if("high".equals(operationType)) {
+			queue = RabbitQueue.HIGH_PRIORITY_DATA_CHANGE_QUEUE;
+		}
+		
+		rabbitMQSender.send(queue, "{\"event_type\": \"delete\", \"data_type\": \"brand\", \"id\": " + id + "}");
 	}
 
 	public Brand findById(Long id) {
