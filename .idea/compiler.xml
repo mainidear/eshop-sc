@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="config-server" />
         <module name="eshop-dataaggr-service" />
+        <module name="eshop-datalink-service" />
         <module name="eshop-datasync-service" />
         <module name="eshop-inventory-service" />
         <module name="eshop-price-service" />
@@ -24,6 +25,7 @@
     <bytecodeTargetLevel>
       <module name="config-server" target="1.8" />
       <module name="eshop-dataaggr-service" target="1.8" />
+      <module name="eshop-datalink-service" target="1.8" />
       <module name="eshop-datasync-service" target="1.8" />
       <module name="eshop-inventory-service" target="1.8" />
       <module name="eshop-price-service" target="1.8" />

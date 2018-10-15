@@ -3,6 +3,7 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/config-server" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eshop-dataaggr-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eshop-datalink-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eshop-datasync-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eshop-inventory-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eshop-price-service" charset="UTF-8" />
