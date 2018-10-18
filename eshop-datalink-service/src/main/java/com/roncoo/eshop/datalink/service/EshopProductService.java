@@ -1,13 +1,11 @@
-package com.roncoo.eshop.datasync.service;
+package com.roncoo.eshop.datalink.service;
 
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.roncoo.eshop.datasync.service.fallback.EshopProductServiceFallback;
-
-@FeignClient(value = "eshop-product-service", fallback = EshopProductServiceFallback.class)
+@FeignClient(value = "eshop-product-service")
 public interface EshopProductService {
 
     @RequestMapping(value = "/brand/findById",method = RequestMethod.GET)
@@ -25,10 +23,16 @@ public interface EshopProductService {
     @RequestMapping(value = "/product-property/findById",method = RequestMethod.GET)
     String findProductPropertyById(@RequestParam(value = "id") Long id);
     
+    @RequestMapping(value = "/product-property/findByProductId",method = RequestMethod.GET)
+    String findProductPropertyByProductId(@RequestParam(value = "productId") Long productId);
+    
     @RequestMapping(value = "/product/findById",method = RequestMethod.GET)
     String findProductById(@RequestParam(value = "id") Long id);
     
     @RequestMapping(value = "/product-specification/findById",method = RequestMethod.GET)
     String findProductSpecificationById(@RequestParam(value = "id") Long id);
+    
+    @RequestMapping(value = "/product-specification/findByProductId",method = RequestMethod.GET)
+    String findProductSpecificationByProductId(@RequestParam(value = "productId") Long productId);
 
 }

@@ -3,11 +3,11 @@
   	<modelVersion>4.0.0</modelVersion>
 
   	<groupId>com.roncoo.eshop</groupId>
-  	<artifactId>eshop-datasync-service</artifactId>
+  	<artifactId>eshop-datalink-service</artifactId>
   	<version>0.0.1-SNAPSHOT</version>
   	<packaging>jar</packaging>
 
-  	<name>eshop-datasync-service</name>
+  	<name>eshop-datalink-service</name>
   	<url>http://maven.apache.org</url>
 
   	<parent>
@@ -31,10 +31,6 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-feign</artifactId>
-		</dependency>
-		<dependency>
-		    <groupId>org.springframework.cloud</groupId>
-		    <artifactId>spring-cloud-starter-hystrix</artifactId>
 		</dependency>
 		
 		<dependency>
