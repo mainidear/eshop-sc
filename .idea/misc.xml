@@ -17,6 +17,7 @@
         <option value="$PROJECT_DIR$/eshop-datasync-service/pom.xml" />
         <option value="$PROJECT_DIR$/eshop-dataaggr-service/pom.xml" />
         <option value="$PROJECT_DIR$/eshop-datalink-service/pom.xml" />
+        <option value="$PROJECT_DIR$/eshop-one-service/pom.xml" />
       </list>
     </option>
   </component>
